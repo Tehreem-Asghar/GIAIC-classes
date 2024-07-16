@@ -12,13 +12,13 @@ Due to synchronouse programing sometimes importent instruction get blocked due t
 
 Callback is a function passed as an argument to another function that's call callbacks for example :
 
-function sum (a,b){
-console.log(a+b);
+function sum(a:number, b:number) {
+  console.log(a + b);
 }
-function abc(a,b,cb:(a:number,b:number)=>void){
-cb(a,b)
+function abc(a : number, b:number, cb: (a: number, b: number) => void) {
+  cb(a, b);
 }
-abc(1,2,sum)
+abc(1, 2, sum);
 
 # callback Hell :
 When our callbacks are deeply nested at a high level we encounter the problem known as "callback hell." for Example :
